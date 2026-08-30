@@ -81,15 +81,16 @@
 
         botoes.forEach(function (botao) {
             let curtiu = false;
+            
             botao.addEventListener("click", function () {
-                console.log("Fui clicado!");
                 let texto = botao.querySelector("span");
+                
                 if (curtiu === false) {
-                    texto.textContent++;
-                    curtiu = true;
+                    texto.textContent++; // Adiciona 1
+                    curtiu = true;       // Muda o estado para curtido
                 } else {
-                    trxto.textContent-- -;
-                    curtiu = false;
+                    texto.textContent--; // Subtrai 1 (Aqui estava o erro!)
+                    curtiu = false;      // Muda o estado para não curtido
                 }
             });
         });
