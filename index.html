@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             background-image: url('fundo.jpg');
@@ -28,7 +26,7 @@
             max-width: 800px;
             margin: 0 auto 40px auto;
             padding: 30px;
-            border-radius: 40px;
+            border-radius: 40px; 
         }
 
         header h1 {
@@ -90,6 +88,39 @@
             font-size: 16px;
             margin: 5px;
         }
+
+        .resenha {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #7B0A26;
+        }
+
+        .resenha h2 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .resenha .diretor {
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .resenha iframe {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .resenha .texto-resenha {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        
+        .resenha .texto-resenha p {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -99,25 +130,37 @@
         <p>Para meninas que amam romance</p>
     </header>
     <main>
-
+        
         <article>
             <img class="figurinha" src="figurinha.png" alt="Desenho de um cachorrinho fofo com óculos">
 
             <div class="conteudo-post">
                 <p class="artigo-autor">Por: Marina de Oliveira da Silva</p>
                 <p>Olá meninas, sejam bem vindas!<br>
-                    criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus
-                    romances favoritos, espero que vocês gostem!!!</p>
+                criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus romances favoritos, espero que vocês gostem!!!</p>
 
                 <button> 👍<span>0</span></button>
                 <button> 👎<span>0</span></button>
             </div>
         </article>
-
+        
         <article>
             <img class="filmes" src="filmes.png" alt="Colagem com vários pôsteres de filmes de romance">
         </article>
 
+        <article class="resenha">
+            <h2>10 coisas que eu odeio em você(1999)</h2>
+            <p class="diretor">(dirigido por Gil Junger)</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tD76OqlJRwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <div class="texto-resenha">
+                <p>Meninas, se vocês ainda não assistiram 10 Coisas que Eu Odeio em Você, coloquem esse filme na listinha agora! A história acompanha a Bianca, que quer muito começar a namorar, mas tem um pequeno problema, seu pai só deixa ela sair com alguém se a irmã mais velha, Kat, também estiver namorando. E vamos combinar que conquistar a Kat não é uma tarefa nada fácil!</p>
+                <p>É aí que entra o Patrick, um garoto com fama de problemático que aceita se aproximar dela por um motivo um tanto inesperado. Só que, no meio de toda essa confusão, o que era para ser apenas um plano começa a virar algo muito mais sério…</p>
+                <p>O filme tem romance, comédia, confusão e aquele clima de escola dos anos 90 que deixa tudo ainda mais gostoso de assistir. E o casal principal? É impossível não torcer por eles.</p>
+            </div>
+        </article>
+        
     </main>
 
     <script>
@@ -125,10 +168,10 @@
 
         botoes.forEach(function (botao) {
             let curtiu = false;
-
+            
             botao.addEventListener("click", function () {
                 let texto = botao.querySelector("span");
-
+                
                 if (curtiu === false) {
                     texto.textContent++;
                     curtiu = true;
