@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    
-    <!-- Importando fontes fofas do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
-            /* 1) Fundo de bolinhas acompanhando a tela toda */
             background-image: url('fundo.jpg');
             background-size: cover;
             background-attachment: fixed;
@@ -22,14 +22,13 @@
         }
 
         header {
-            /* 4) Fundo branco com leve transparência (0.85) e bordas arredondadas */
             background-color: rgba(255, 255, 255, 0.85);
-            color: #7B0A26; /* Cor vinho/bordô combinando com o tema */
+            color: #7B0A26;
             text-align: center;
             max-width: 800px;
             margin: 0 auto 40px auto;
             padding: 30px;
-            border-radius: 40px; 
+            border-radius: 40px;
         }
 
         header h1 {
@@ -45,7 +44,6 @@
         }
 
         main {
-            /* Fundo transparente para mostrar as bolinhas do body */
             background-color: transparent;
             max-width: 800px;
             margin: 0 auto;
@@ -64,11 +62,10 @@
             height: auto;
         }
 
-        /* Classe para ajustar o tamanho da imagem dos filmes */
         .filmes {
             width: 100%;
             height: auto;
-            border-radius: 15px; /* Deixa as pontinhas da imagem levemente redondas */
+            border-radius: 15px;
         }
 
         .conteudo-post {
@@ -98,37 +95,29 @@
 
 <body>
     <header>
-        <!-- 3) Textos do cabeçalho modificados -->
         <h1>Blog</h1>
         <p>Para meninas que amam romance</p>
     </header>
     <main>
-        
-        <!-- Primeiro Post: Figurinha e Texto de Boas-vindas -->
+
         <article>
-            <!-- 2) Imagem da figurinha atualizada -->
-            <img class="figurinha" src="figurinha.png"
-                alt="Desenho de um cachorrinho fofo com óculos">
+            <img class="figurinha" src="figurinha.png" alt="Desenho de um cachorrinho fofo com óculos">
 
             <div class="conteudo-post">
-                <!-- 5) Autora e texto substituídos -->
                 <p class="artigo-autor">Por: Marina de Oliveira da Silva</p>
                 <p>Olá meninas, sejam bem vindas!<br>
-                criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus romances favoritos, espero que vocês gostem!!!</p>
+                    criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus
+                    romances favoritos, espero que vocês gostem!!!</p>
 
-                <!-- 6) Botões mantidos -->
                 <button> 👍<span>0</span></button>
                 <button> 👎<span>0</span></button>
             </div>
         </article>
-        
-        <!-- Segundo Post: Imagem dos filmes -->
+
         <article>
-            <!-- 7) Segundo parágrafo substituído pela imagem filmes.png -->
-            <img class="filmes" src="filmes.png"
-                alt="Colagem com vários pôsteres de filmes de romance">
+            <img class="filmes" src="filmes.png" alt="Colagem com vários pôsteres de filmes de romance">
         </article>
-        
+
     </main>
 
     <script>
@@ -136,10 +125,10 @@
 
         botoes.forEach(function (botao) {
             let curtiu = false;
-            
+
             botao.addEventListener("click", function () {
                 let texto = botao.querySelector("span");
-                
+
                 if (curtiu === false) {
                     texto.textContent++;
                     curtiu = true;
