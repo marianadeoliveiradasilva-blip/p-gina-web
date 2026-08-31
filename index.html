@@ -1,16 +1,23 @@
+<!-- Declara ao navegador que este é um documento HTML5 atualizado -->
 <!DOCTYPE html>
+<!-- Tag raiz do HTML, com a linguagem configurada para Português do Brasil (pt-br) -->
 <html lang="pt-br">
 
 <head>
+    <!-- Configura a codificação de caracteres, permitindo o uso de acentos (ç, ã, é, etc.) -->
     <meta charset="UTF-8">
+    <!-- Garante que o site se adapte bem a telas de celulares e tablets (responsividade) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Define o título que aparece na aba do navegador -->
     <title>Blog</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap"
-        rel="stylesheet">
-
+    
+    <!-- Conecta o site ao Google Fonts para importar fontes (Dancing Script e Nunito) -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tag style contém todo o CSS, que é responsável pela aparência e design do site -->
     <style>
+        /* Estiliza o corpo inteiro da página (fundo, fonte geral e espaçamentos) */
         body {
             background-image: url('fundo.jpg');
             background-size: cover;
@@ -21,6 +28,7 @@
             padding: 20px;
         }
 
+        /* Estiliza a caixinha do cabeçalho principal (fundo branco transparente e bordas arredondadas) */
         header {
             background-color: rgba(255, 255, 255, 0.85);
             color: #7B0A26;
@@ -28,21 +36,24 @@
             max-width: 800px;
             margin: 0 auto 40px auto;
             padding: 30px;
-            border-radius: 40px;
+            border-radius: 40px; 
         }
 
+        /* Define o tamanho e a fonte da letra do título principal dentro do cabeçalho */
         header h1 {
             font-family: 'Dancing Script', cursive;
             font-size: 70px;
             margin: 0;
         }
 
+        /* Define a aparência do subtítulo dentro do cabeçalho */
         header p {
             font-family: 'Dancing Script', cursive;
             font-size: 35px;
             margin: 0;
         }
 
+        /* Define a área principal do site, onde vão ficar as postagens (limita a largura para ficar organizado) */
         main {
             background-color: transparent;
             max-width: 800px;
@@ -50,6 +61,7 @@
             padding: 16px;
         }
 
+        /* Estiliza cada bloquinho de postagem (agrupa os itens lado a lado ou em coluna) */
         article {
             display: flex;
             align-items: center;
@@ -57,17 +69,20 @@
             margin-bottom: 40px;
         }
 
+        /* Controla o tamanho das imagens */
         .figurinha {
             width: 150px;
             height: auto;
         }
 
+        /* Controla o tamanho da imagem grandona que mostra a colagem dos filmes */
         .filmes {
             width: 100%;
             height: auto;
             border-radius: 15px;
         }
 
+        /* Formata os textos do post inicial de boas-vindas */
         .conteudo-post {
             color: #7B0A26;
             font-weight: bold;
@@ -75,12 +90,14 @@
             font-size: 20px;
         }
 
+        /* Dá um toque especial no nome do autor (menor e em itálico) */
         .artigo-autor {
             font-size: 16px;
             opacity: 0.8;
             font-style: italic;
         }
 
+        /* Estiliza os botoes de like e dislike */
         button {
             cursor: pointer;
             background-color: #f0f0f0;
@@ -91,6 +108,7 @@
             margin: 5px;
         }
 
+        /* Define o layout de cada resenha de filme (texto centralizado e coluna) */
         .resenha {
             flex-direction: column;
             justify-content: center;
@@ -98,33 +116,38 @@
             color: #7B0A26;
         }
 
+        /* Tamanho do nome dos filmes nas resenhas */
         .resenha h2 {
             margin: 0;
             font-size: 28px;
         }
 
+        /* Formata a linha com o nome do diretor abaixo do título */
         .resenha .diretor {
             font-size: 14px;
             margin-top: 5px;
             margin-bottom: 20px;
         }
 
+        /* Ajusta o vídeo do Youtube para não ultrapassar a tela e deixa as bordas arredondadas */
         .resenha iframe {
             max-width: 100%;
             border-radius: 10px;
         }
 
+        /* Configura a fonte e espaçamento dos textos das resenhas */
         .resenha .texto-resenha {
             font-size: 18px;
             line-height: 1.5;
             margin-top: 20px;
         }
-
+        
+        /* Adiciona um espacinho em baixo de cada parágrafo do texto */
         .resenha .texto-resenha p {
             margin-bottom: 10px;
         }
 
-        /* Novos estilos para o rodapé/despedida */
+        /* Organiza toda a caixinha final de despedida */
         .despedida-container {
             display: flex;
             flex-direction: column;
@@ -137,6 +160,7 @@
             font-weight: bold;
         }
 
+        /* Coloca as duas imagens finais lado a lado com o textinho de despedida no meio */
         .despedida-meio {
             display: flex;
             align-items: center;
@@ -145,169 +169,138 @@
             width: 100%;
         }
 
+        /* Define como o textinho final se comporta entre as imagens */
         .despedida-meio p {
             flex: 1;
             line-height: 1.5;
             max-width: 500px;
         }
 
+        /* Espaçamento para o textinho "beijinhos e abraços" e a data */
         .assinatura {
             margin-top: 30px;
         }
 
+        /* Remove espaços em branco exagerados entre o beijo e a data */
         .assinatura p {
             margin: 5px 0;
         }
     </style>
 </head>
 
+<!-- Body abriga absolutamente tudo que aparece na tela do site -->
 <body>
+    <!-- Cabeçalho principal com o nome do seu blog -->
     <header>
         <h1>Blog</h1>
         <p>Para meninas que amam romance</p>
     </header>
+    
+    <!-- Main engloba todo o miolo principal do site (boas vindas e resenhas) -->
     <main>
-
+        
+        <!-- Primeiro artigo: a postagem de boas vindas com a sua figurinha -->
         <article>
+            <!-- Tag img insere a imagem da figurinha -->
             <img class="figurinha" src="figurinha.png" alt="Desenho de um cachorrinho fofo com óculos">
 
+            <!-- Div é uma caixinha genérica para agrupar o texto da postagem -->
             <div class="conteudo-post">
+                <!-- Tag p representa um parágrafo de texto -->
                 <p class="artigo-autor">Por: Marina de Oliveira da Silva</p>
-                <p>Olá meninas, sejam bem vindas!<br>
-                    criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus
-                    romances favoritos, espero que vocês gostem!!!</p>
+                <p>Olá meninas, sejam bem vindas!<br> <!-- Tag br pula uma linha no texto -->
+                criei esse blog, para todas vocês apoixanadas por romances. Aqui irei indicar alguns de meus romances favoritos, espero que vocês gostem!!!</p>
 
+                <!-- Tag button cria os botões interagíveis na tela -->
                 <button> 👍<span>0</span></button>
                 <button> 👎<span>0</span></button>
             </div>
         </article>
-
+        
+        <!-- Segundo artigo: apenas exibe a colagem com os filmes -->
         <article>
             <img class="filmes" src="filmes.png" alt="Colagem com vários pôsteres de filmes de romance">
         </article>
 
+        <!-- Artigo da primeira resenha -->
         <article class="resenha">
+            <!-- Tag h2 define o título secundário (nome do filme) -->
             <h2>10 coisas que eu odeio em você(1999)</h2>
             <p class="diretor">(dirigido por Gil Junger)</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tD76OqlJRwQ"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            
+            <!-- Tag iframe serve para incorporar uma página externa, neste caso, o reprodutor de vídeo do YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tD76OqlJRwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
             <div class="texto-resenha">
-                <p>Meninas, se vocês ainda não assistiram 10 Coisas que Eu Odeio em Você, coloquem esse filme na
-                    listinha agora! A história acompanha a Bianca, que quer muito começar a namorar, mas tem um pequeno
-                    problema, seu pai só deixa ela sair com alguém se a irmã mais velha, Kat, também estiver namorando.
-                    E vamos combinar que conquistar a Kat não é uma tarefa nada fácil!</p>
-                <p>É aí que entra o Patrick, um garoto com fama de problemático que aceita se aproximar dela por um
-                    motivo um tanto inesperado. Só que, no meio de toda essa confusão, o que era para ser apenas um
-                    plano começa a virar algo muito mais sério…</p>
-                <p>O filme tem romance, comédia, confusão e aquele clima de escola dos anos 90 que deixa tudo ainda mais
-                    gostoso de assistir. E o casal principal? É impossível não torcer por eles.</p>
+                <p>Meninas, se vocês ainda não assistiram 10 Coisas que Eu Odeio em Você, coloquem esse filme na listinha agora! A história acompanha a Bianca, que quer muito começar a namorar, mas tem um pequeno problema, seu pai só deixa ela sair com alguém se a irmã mais velha, Kat, também estiver namorando. E vamos combinar que conquistar a Kat não é uma tarefa nada fácil!</p>
+                <p>É aí que entra o Patrick, um garoto com fama de problemático que aceita se aproximar dela por um motivo um tanto inesperado. Só que, no meio de toda essa confusão, o que era para ser apenas um plano começa a virar algo muito mais sério…</p>
+                <p>O filme tem romance, comédia, confusão e aquele clima de escola dos anos 90 que deixa tudo ainda mais gostoso de assistir. E o casal principal? É impossível não torcer por eles.</p>
             </div>
         </article>
-
+        
+        <!-- Artigo da segunda resenha -->
         <article class="resenha">
             <h2>Um Amor para Recordar (2002)</h2>
             <p class="diretor">(Adam Shankman)</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/n_U7gBQNFwk"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/n_U7gBQNFwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
             <div class="texto-resenha">
-                <p>Meninas, <em>Um Amor para Recordar</em> é aquele tipo de filme que começa de um jeito bem simples,
-                    mas vai ficando cada vez mais emocionante. A história acompanha Landon, um garoto popular e meio
-                    rebelde que acaba se aproximando de Jamie, uma menina mais quieta e totalmente diferente dele. Os
-                    dois começam a passar mais tempo juntos e, aos poucos, aquela relação que parecia improvável vai se
-                    transformando em um romance de verdade. Jamie faz Landon enxergar a vida de um jeito diferente, e
-                    ele começa a mudar por causa dela.</p>
-                <p>É um filme com muito romance, momentos fofos e, claro, algumas partes que vão fazer vocês chorarem.
-                    Se vocês gostam de histórias de amor que realmente mexem com a gente e deixam aquela sensação de que
-                    o filme ficou na cabeça depois que acabou, <em>Um Amor para Recordar</em> merece muito estar na
-                    lista.</p>
+                <!-- Tag em (emphasis) deixa o texto em itálico, ótimo para destacar nomes de filmes -->
+                <p>Meninas, <em>Um Amor para Recordar</em> é aquele tipo de filme que começa de um jeito bem simples, mas vai ficando cada vez mais emocionante. A história acompanha Landon, um garoto popular e meio rebelde que acaba se aproximando de Jamie, uma menina mais quieta e totalmente diferente dele. Os dois começam a passar mais tempo juntos e, aos poucos, aquela relação que parecia improvável vai se transformando em um romance de verdade. Jamie faz Landon enxergar a vida de um jeito diferente, e ele começa a mudar por causa dela.</p>
+                <p>É um filme com muito romance, momentos fofos e, claro, algumas partes que vão fazer vocês chorarem. Se vocês gostam de histórias de amor que realmente mexem com a gente e deixam aquela sensação de que o filme ficou na cabeça depois que acabou, <em>Um Amor para Recordar</em> merece muito estar na lista.</p>
             </div>
         </article>
 
+        <!-- Artigo da terceira resenha -->
         <article class="resenha">
             <h2>Operação Cupido (1998)</h2>
             <p class="diretor">(Nancy Meyers)</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/PMAhVpgzmRU"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PMAhVpgzmRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
             <div class="texto-resenha">
-                <p>Meninas, <em>Operação Cupido</em> é aquele filme perfeito para quem ama uma boa confusão em família!
-                    A história acompanha Annie e Hallie, duas meninas que se conhecem por acaso em um acampamento de
-                    verão e descobrem uma coisa que muda tudo: elas são irmãs gêmeas! O mais engraçado é que cada uma
-                    cresceu com um dos pais e nenhuma sabia da existência da outra.</p>
-                <p>Depois da descoberta, elas decidem trocar de lugar para conhecer o outro lado da família e, claro,
-                    bolar um plano para tentar fazer os pais se apaixonarem novamente. Só que colocar esse plano em
-                    prática não vai ser tão fácil quanto elas imaginavam...</p>
-                <p>Com muita comédia, momentos fofos e aquela nostalgia dos filmes dos anos 90, <em>Operação Cupido</em>
-                    é uma daquelas histórias leves que dão vontade de assistir de novo. E ter a Lindsay Lohan
-                    interpretando as duas gêmeas deixa tudo ainda mais divertido.</p>
+                <p>Meninas, <em>Operação Cupido</em> é aquele filme perfeito para quem ama uma boa confusão em família! A história acompanha Annie e Hallie, duas meninas que se conhecem por acaso em um acampamento de verão e descobrem uma coisa que muda tudo: elas são irmãs gêmeas! O mais engraçado é que cada uma cresceu com um dos pais e nenhuma sabia da existência da outra.</p>
+                <p>Depois da descoberta, elas decidem trocar de lugar para conhecer o outro lado da família e, claro, bolar um plano para tentar fazer os pais se apaixonarem novamente. Só que colocar esse plano em prática não vai ser tão fácil quanto elas imaginavam...</p>
+                <p>Com muita comédia, momentos fofos e aquela nostalgia dos filmes dos anos 90, <em>Operação Cupido</em> é uma daquelas histórias leves que dão vontade de assistir de novo. E ter a Lindsay Lohan interpretando as duas gêmeas deixa tudo ainda mais divertido.</p>
             </div>
         </article>
 
+        <!-- Artigo da quarta resenha -->
         <article class="resenha">
             <h2>O Diário da Princesa (2001)</h2>
             <p class="diretor">(Garry Marshall)</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xRkgr9tHCyw"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xRkgr9tHCyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
             <div class="texto-resenha">
-                <p>Meninas, <em>O Diário da Princesa</em> conta a história da Mia, uma adolescente tímida e
-                    superatrapalhada que leva uma vida completamente normal, até descobrir que é herdeira do trono de
-                    Genóvia. Sim, ela descobre simplesmente que é uma princesa!</p>
-                <p>A partir daí, ela começa a ter aulas de etiqueta com a avó para aprender a se comportar como uma
-                    verdadeira princesa, mas não é tão fácil assim. Enquanto tenta se acostumar com essa nova vida, ela
-                    ainda precisa lidar com a escola, as amizades, as inseguranças e, claro, aquele romance que não
-                    poderia faltar.</p>
-                <p>O mais legal é acompanhar a Mia descobrindo seu próprio jeito de ser e ficando cada vez mais
-                    confiante. É um filme leve, divertido e com aquele romance adolescente que deixa tudo ainda melhor.
-                    Se você gosta de histórias de princesas, escola, amizade e romance, esse é um daqueles filmes que
-                    vale muito a pena assistir.</p>
+                <p>Meninas, <em>O Diário da Princesa</em> conta a história da Mia, uma adolescente tímida e superatrapalhada que leva uma vida completamente normal, até descobrir que é herdeira do trono de Genóvia. Sim, ela descobre simplesmente que é uma princesa!</p>
+                <p>A partir daí, ela começa a ter aulas de etiqueta com a avó para aprender a se comportar como uma verdadeira princesa, mas não é tão fácil assim. Enquanto tenta se acostumar com essa nova vida, ela ainda precisa lidar com a escola, as amizades, as inseguranças e, claro, aquele romance que não poderia faltar.</p>
+                <p>O mais legal é acompanhar a Mia descobrindo seu próprio jeito de ser e ficando cada vez mais confiante. É um filme leve, divertido e com aquele romance adolescente que deixa tudo ainda melhor. Se você gosta de histórias de princesas, escola, amizade e romance, esse é um daqueles filmes que vale muito a pena assistir.</p>
             </div>
         </article>
 
+        <!-- Artigo da quinta resenha -->
         <article class="resenha">
             <h2>De Repente 30 (2004)</h2>
             <p class="diretor">(Gary Winick)</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_pmFp2W65Fs"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_pmFp2W65Fs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
             <div class="texto-resenha">
-                <p>Meninas, <em>De Repente 30</em> conta a história da Jenna, uma adolescente de 13 anos que está
-                    cansada de se sentir invisível na escola e só quer ser adulta logo. No dia do seu aniversário, ela
-                    faz um pedido e, quando acorda no dia seguinte, tem uma surpresa: ela está com 30 anos!</p>
-                <p>Só que tem um pequeno detalhe: Jenna pulou 17 anos da própria vida e agora precisa descobrir o que
-                    aconteceu durante todo esse tempo. Ela tem o emprego dos sonhos, um apartamento incrível e uma vida
-                    que parecia perfeita, mas começa a perceber que talvez tenha deixado algumas pessoas e coisas
-                    importantes para trás.</p>
-                <p>E é aí que o filme fica ainda mais interessante, porque Jenna começa a repensar as escolhas que fez e
-                    percebe que crescer não significa necessariamente ter tudo aquilo que ela imaginava.</p>
-                <p>É uma mistura de comédia, romance, amizade e nostalgia, com aquela história que faz a gente rir, mas
-                    também dá uma vontadezinha de voltar no tempo e aproveitar mais as coisas simples.</p>
+                <p>Meninas, <em>De Repente 30</em> conta a história da Jenna, uma adolescente de 13 anos que está cansada de se sentir invisível na escola e só quer ser adulta logo. No dia do seu aniversário, ela faz um pedido e, quando acorda no dia seguinte, tem uma surpresa: ela está com 30 anos!</p>
+                <p>Só que tem um pequeno detalhe: Jenna pulou 17 anos da própria vida e agora precisa descobrir o que aconteceu durante todo esse tempo. Ela tem o emprego dos sonhos, um apartamento incrível e uma vida que parecia perfeita, mas começa a perceber que talvez tenha deixado algumas pessoas e coisas importantes para trás.</p>
+                <p>E é aí que o filme fica ainda mais interessante, porque Jenna começa a repensar as escolhas que fez e percebe que crescer não significa necessariamente ter tudo aquilo que ela imaginava.</p>
+                <!-- Tag strong deixa o texto em negrito, útil para destacar os temas centrais do filme -->
+                <p>É uma mistura de <strong>comédia, romance, amizade e nostalgia</strong>, com aquela história que faz a gente rir, mas também dá uma vontadezinha de voltar no tempo e aproveitar mais as coisas simples.</p>
             </div>
         </article>
 
-        <!-- Nova seção de Despedida -->
+        <!-- Seção final de Despedida -->
         <article class="despedida-container">
             <div class="despedida-meio">
                 <img class="figurinha" src="figurinha2.png" alt="Personagem fofo mandando beijo">
-                <p>E por hoje é isso, meninas! Espero que vocês tenham gostado das indicações e, quem sabe, encontrado
-                    um novo filme favorito. Até o próximo post.</p>
+                <p>E por hoje é isso, meninas! Espero que vocês tenham gostado das indicações e, quem sabe, encontrado um novo filme favorito. Até o próximo post.</p>
                 <img class="figurinha" src="figurinha3.png" alt="Personagem fofo mandando beijo">
             </div>
             <div class="assinatura">
@@ -318,19 +311,28 @@
 
     </main>
 
+    <!-- Tag script engloba códigos em JavaScript que criam as interações da página -->
     <script>
+        // Seleciona todos os elementos <button> (botões de curtir) na página
         const botoes = document.querySelectorAll("button");
 
+        // Executa uma ação para cada botão encontrado
         botoes.forEach(function (botao) {
+            // Cria uma variável para lembrar se a pessoa já curtiu ou não
             let curtiu = false;
-
+            
+            // Fica "escutando" para ver quando alguém clica no botão
             botao.addEventListener("click", function () {
+                // Seleciona a tag <span>, que é onde o numerozinho está guardado dentro do botão
                 let texto = botao.querySelector("span");
-
+                
+                // Se ainda não estava curtido, soma 1 no número e marca como curtido
                 if (curtiu === false) {
                     texto.textContent++;
                     curtiu = true;
-                } else {
+                } 
+                // Se já estava curtido e clicou de novo, subtrai 1 e desmarca
+                else {
                     texto.textContent--;
                     curtiu = false;
                 }
