@@ -123,6 +123,41 @@
         .resenha .texto-resenha p {
             margin-bottom: 10px;
         }
+
+        /* Novos estilos para o rodapé/despedida */
+        .despedida-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            color: #7B0A26;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .despedida-meio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .despedida-meio p {
+            flex: 1;
+            line-height: 1.5;
+            max-width: 500px;
+        }
+
+        .assinatura {
+            margin-top: 30px;
+        }
+
+        .assinatura p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 
@@ -175,7 +210,7 @@
 
         <article class="resenha">
             <h2>Um Amor para Recordar (2002)</h2>
-            <p class="diretor">(dirgido por Adam Shankman)</p>
+            <p class="diretor">(Adam Shankman)</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/n_U7gBQNFwk"
                 title="YouTube video player" frameborder="0"
@@ -198,7 +233,7 @@
 
         <article class="resenha">
             <h2>Operação Cupido (1998)</h2>
-            <p class="diretor">(dirigido por Nancy Meyers)</p>
+            <p class="diretor">(Nancy Meyers)</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/PMAhVpgzmRU"
                 title="YouTube video player" frameborder="0"
@@ -221,7 +256,7 @@
 
         <article class="resenha">
             <h2>O Diário da Princesa (2001)</h2>
-            <p class="diretor">(dirigido por Garry Marshall)</p>
+            <p class="diretor">(Garry Marshall)</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/xRkgr9tHCyw"
                 title="YouTube video player" frameborder="0"
@@ -245,7 +280,7 @@
 
         <article class="resenha">
             <h2>De Repente 30 (2004)</h2>
-            <p class="diretor">(dirigido por Gary Winick)</p>
+            <p class="diretor">(Gary Winick)</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/_pmFp2W65Fs"
                 title="YouTube video player" frameborder="0"
@@ -264,6 +299,20 @@
                     percebe que crescer não significa necessariamente ter tudo aquilo que ela imaginava.</p>
                 <p>É uma mistura de comédia, romance, amizade e nostalgia, com aquela história que faz a gente rir, mas
                     também dá uma vontadezinha de voltar no tempo e aproveitar mais as coisas simples.</p>
+            </div>
+        </article>
+
+        <!-- Nova seção de Despedida -->
+        <article class="despedida-container">
+            <div class="despedida-meio">
+                <img class="figurinha" src="figurinha2.png" alt="Personagem fofo mandando beijo">
+                <p>E por hoje é isso, meninas! Espero que vocês tenham gostado das indicações e, quem sabe, encontrado
+                    um novo filme favorito. Até o próximo post.</p>
+                <img class="figurinha" src="figurinha3.png" alt="Personagem fofo mandando beijo">
+            </div>
+            <div class="assinatura">
+                <p>beijinhos e abraços</p>
+                <p>30/08/2026</p>
             </div>
         </article>
 
